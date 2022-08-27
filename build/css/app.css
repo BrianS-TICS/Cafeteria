@@ -338,10 +338,6 @@ template {
   display: none;
 }
 
-h1 {
-  text-align: center;
-}
-
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -397,13 +393,110 @@ h3 {
 }
 
 .bg-primario {
-  background-color: #E8505B;
+  background-color: #5E311E;
 }
 
 .header {
-  background-color: black;
+  padding: 5rem 0rem;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .header {
+    min-height: 70rem;
+  }
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.7;
+}
+.header .contenido-header {
+  position: relative;
+}
+.header .texto-header {
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFF;
+  padding: 2rem 0;
+}
+@media (min-width: 768px) {
+  .header .texto-header {
+    padding: 5rem 0;
+  }
+}
+@media (min-width: 1024px) {
+  .header .texto-header {
+    padding: 10rem 0;
+  }
+}
+
+.header-inicio {
+  background-image: url(../img/header_inicio.jpg);
+}
+
+.barra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .barra {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1024px) {
+  .barra {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.barra .logo {
+  width: 70%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .barra .logo {
+    width: 20rem;
+    margin: 0;
+  }
 }
 
 .nav-principal {
-  background-color: rgb(255, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+}
+@media (min-width: 768px) {
+  .nav-principal {
+    flex-direction: row;
+    gap: 2rem;
+    margin: 0;
+  }
+}
+.nav-principal a {
+  padding: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #FFF;
+}
+.nav-principal a:hover {
+  color: #C39C63;
+}
+@media (min-width: 768px) {
+  .nav-principal a {
+    padding: 0rem;
+  }
+}
+.nav-principal a.activo {
+  color: #C39C63;
 }

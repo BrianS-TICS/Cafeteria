@@ -1,0 +1,21 @@
+@use 'variables' as v;
+
+@mixin telefono{
+    @media (min-width: v.$telefono ) {
+        //* @content toma todo el contenido de un mixin al usarlo y lo inyecta 
+        //* Uso en _header | Linea 8
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: v.$desktop){
+        @content;
+    }
+}

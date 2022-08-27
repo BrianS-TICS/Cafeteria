@@ -1,5 +1,50 @@
-// _header.scss [sass] significa que el archivo será incluido en otro
-
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
 .header{
-    background-color: black;
+    padding: 5rem 0rem;
+    position: relative;
+
+    //* @include para usar mixins
+    @include m.tablet{
+        min-height: 70rem;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: v.$negro;
+
+        opacity: .7;
+    }
+
+    .contenido-header{
+        //* Position relative hace que un elemento se sobreponga a otro
+        position: relative;
+    }
+
+    .texto-header{
+        text-transform: uppercase;
+        text-align: center;
+        color: v.$grisClaro;
+        padding: 2rem 0;
+
+        @include m.tablet{
+            padding: 5rem 0;
+        }
+
+        @include m.desktop{
+            padding: 10rem 0;
+        }
+    }
+
+
+}
+
+//* Header de pagina
+.header-inicio{
+    background-image: url(../img/header_inicio.jpg);
 }
