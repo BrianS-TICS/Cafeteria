@@ -59,6 +59,6 @@ exports.imagenes = imagenes; //* Escucha por cambios en imagenes
 exports.dev = dev; //* Escucha por cambios en imagenes y archivos scss
 exports.versionAvif = versionAvif //* Convierte imagenes en avif
 exports.versionWebp = versionWebp;//* Convierte imagenes en webp
-exports.default = series(css, dev);
+exports.default = series(css, imagenes, dev);
 // Series : Inicia las tareas una a una - (Inicia una, termina y sigue la siguiente)
 // Parallel - Todas inician al mismo tiempo
